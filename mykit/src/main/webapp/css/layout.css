@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@font-face{
+	font-family:'NanumBold';
+	src:url('fonts/NanumSquareEB.ttf');
+}
+@font-face{
+	font-family:'Nanum';
+	src:url('fonts/NanumSquareR.ttf');
+}
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+	margin:0; padding:0;
+	text-decoration:none;
+	color: inherit;
+}
+header > div {
+	display:inline-block;
+}
+.wrap {
+	width:100%;
+}
+ul {
+	list-style-type:none;
+}
+.layout-hd {
+	width:1200px; height:120px;
+	margin:0 auto;
+	position:relative;
+	font-family:'Nanum';
+}
+.sub1, .sub5 {z-index:9999;}
+.search{
+	width:400px; height:120px;
+	text-align:left;
+	float:left;
+}
+.search input[type=search]{
+	border:none;
+	border-bottom:1px solid #eab600;
+	text-align:left;
+	font-family:'Nanum';
+	margin-top:85px;
+	padding:5px;
+	width:210px;
+	float:left;
+}
+.search input[name=sh-en]{
+	border-bottom:1px solid #eab600;
+	float:left;
+	width:20px;
+	margin-top:86px;
+	padding-bottom:5px;
+}
+.search input:focus { outline:none; } /* input 박스를 클릭 했을떄 나오는 테두리 색상 없애기 */
+.logo{
+	width:400px; height:120px;
+	float:left;
+}
+.logo img{ margin:7px; height:106px;}
+.top{
+	width:400px; height:120px;
+	font-size:13px;
+	color:#444444;
+	float:left;
+}
+.top > ul > li{
+	float:left;
+	margin:0 0 0 13px; /* top-right-bottom-left */
+}
+.top > ul{
+	margin:95px 0 0 10px; /* top-right-bottom-left */
+}
+.top ul li a:hover {
+	color:#eab600;
+}
+.menu{
+	width:100%; height:50px;
+	text-align:center;
+	background: rgba(255, 255, 255, 0.8);
+	border-top:1px solid #e8e8e8;
+	border-bottom:1px solid #e8e8e8;
+	top:0px; /* 지정한 지점 */
+	position:sticky; /* Position:Sticky -> 최초에 relative속성과 같이 동작하다가 스크롤이 이동하면 지정한 지점에 요소를 고정 */
+	display:block;
+	z-index:9;
+}
+.menu > div{
+	width:1200px;
+	margin:0 auto; /* 가운데 배치 */
+	border-left:1px solid #e8e8e8;
+}
+.navi{
+	width:1200px; height:50px;
+	padding:0;
+	margin:0 auto; /* 가운데 배치 */
+}
+#sub-navi{
+	width:238.8px; height:50px;
+	font-family:'NanumBold';
+	font-size:16.5px;
+	color:#444444;
+	float:left;
+	line-height:50px;
+	border-right:1px solid #e8e8e8;
+	transition: color 0.2s ease 0.1s; /* [메뉴 글자색] 대상, 진행시간,  속도곡선(느리게->빠르게->느리게), 지연시간 */
+	z-index:9;
+}
+#sub-navi-special{
+	width:238.8px; height:50px;
+	font-family:'SBAggroB';
+	font-size:1em;
+	float:left;
+	line-height:50px;
+	border-right:1px solid #e8e8e8;
+	z-index:9;
+}
+#sub-navi ul{
+	font-family:'Nanum';
+	font-size:14.5px;
+	color: rgba(68, 68, 68, 0);
+	padding:0;
+	background: rgba(255, 255, 255, 0);
+	transition: background 0.2s ease 0.1s; /* [투명도] 대상, 진행시간,  속도곡선(느리게->빠르게->느리게), 지연시간 */
+	transition: color 0.2s ease 0.1s;
+}
+#sub-navi:hover > ul{ 
+	background: rgba(255, 255, 255, 0.8); 
+	color: rgba(68, 68, 68, 1);
+} /* #sub-navi 마우스 -> ul 출력 */
+#sub-navi:hover{ color:#eab600; }
+#sub-navi ul li{ /* 메뉴 내려오는 속도 지정 */
+	height:0;
+	overflow:hidden;
+	padding-bottom:10px;
+	transition:height 0.2s ease 0.1s;
+}
+#sub-navi ul li:hover{
+	background: rgba(234, 182, 0, 0.1);
+}
+#sub-navi:hover > ul li{ /* 메뉴 내려오는 속도 지정 */
+	height:40px;
+	overflow:visible;
+}
+#special {
+	 font-size:1em;
+	 font-family: 'SBAggroB';
+	 user-select:none;
+}
+#special span { display:inline-block; animation:float .2s ease-in-out infinite; }
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+#special:hover span { animation:bounce .6s; }
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+#special span:nth-child(4n) { color:hsl(0,99%,62%); text-shadow:1px 1px hsl(300,0%,1%), 2px 2px hsl(300,0%,1%), 3px 3px hsl(300,0%,1%), 4px 4px hsl(300,0%,1%); }
+#special span:nth-child(4n-1) { color:hsl(25,87%,62%); text-shadow:1px 1px hsl(300,0%,1%), 2px 2px hsl(300,0%,1%), 3px 3px hsl(300,0%,1%), 4px 4px hsl(300,0%,1%); }
+#special span:nth-child(4n-2) { color:hsl(49,96%,64%); text-shadow:1px 1px hsl(300,0%,1%), 2px 2px hsl(300,0%,1%), 3px 3px hsl(300,0%,1%), 4px 4px hsl(300,0%,1%); }
+#special span:nth-child(4n-3) { color:hsl(136,34%,58%); text-shadow:1px 1px hsl(300,0%,1%), 2px 2px hsl(300,0%,1%), 3px 3px hsl(300,0%,1%), 4px 4px hsl(300,0%,1%); }
+
+#special span:nth-child(2){ animation-delay:.05s; }
+#special span:nth-child(3){ animation-delay:.1s; }
+#special span:nth-child(4){ animation-delay:.15s; }
+#special span:nth-child(5){ animation-delay:.2s; }
+#special span:nth-child(6){ animation-delay:.25s; }
+#special span:nth-child(7){ animation-delay:.3s; }
+#special span:nth-child(8){ animation-delay:.35s; }
+#special span:nth-child(9){ animation-delay:.4s; }
+#special span:nth-child(10){ animation-delay:.45s; }
+#special span:nth-child(11){ animation-delay:.5s; }
+#special span:nth-child(12){ animation-delay:.55s; }
+#special span:nth-child(13){ animation-delay:.6s; }
+#special span:nth-child(14){ animation-delay:.65s; }
+
+.bottom-menu{
+	width:100%; height:300px;
+	margin-top:60px;
+	background:#e8e8e8;
+}
+.wrap-bottom{
+	width:1200px; height:300px;
+	margin:0 auto; padding:50px 0;
+	text-align:center;
+}
+.wrap-bottom .b1{
+	display:block;
+	width:299px; height:200px;
+	float:left;
+	border-right:1px solid #808080;
+}
+.wrap-bottom .b1 > img{
+	margin:25px auto;
+}
+.wrap-bottom .b2{
+	width:284px; height:200px;
+	float:left;
+	border-right:1px solid #444444;
+}
+.b2 > ul {
+	margin-left:30px;
+	margin-top:30px;
+}
+.b2 > ul li{
+	font-family:'Nanum';
+	text-align:left;
+	font-size:14px;
+	color:#808080;
+	margin-top:10px;
+}
+.b2 > ul :nth-child(1){
+	font-family:'NanumBold';
+	text-align:left;
+	font-size:17px;
+	color:#444444;
+}
+.b2 > ul :nth-child(2){
+	font-family:'NanumBold';
+	text-align:left;
+	font-size:20px;
+	color:#d40000;
+}
+.wrap-bottom .b3{
+	width:600px; height:200px;
+	float:left;
+	padding-left:15px;
+}
+.b3 > ul > li{
+	float:left;
+	margin:30px 0 0 10px; /* top-right-bottom-left */
+	font-family:'Nanum';
+	font-size:15px;
+}
+.b3 > a{
+	margin:0 0 0 10px; padding:0;
+	display:block;
+	float:left;
+}

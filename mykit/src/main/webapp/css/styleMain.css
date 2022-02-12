@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@font-face{
+	font-family:'NanumBold';
+	src:url('fonts/NanumSquareEB.ttf');
+}
+@font-face{
+	font-family:'Nanum';
+	src:url('fonts/NanumSquareR.ttf');
+}
+/* ----- header2 시작 ----- */
+body{ overflow-x:hidden; }
+.hd2{
+	width:100%; height:400px;
+	margin-bottom:50px;
+}
+.cycle-slide{
+	position:relative; /* 위의 header태그를 기준 바로 밑에 배치 */
+	top:50px;
+	width:100%;
+	height:370px;
+}
+.cycle-slide-sub{ display:block; }
+.cycle-slide-sub > li{
+	position: absolute;
+  	top: 0; left: 0;
+  	z-index:5;
+  	display: block;
+}
+/* 하단 동그라미 버튼 CSS*/
+.cycle-slide_btn > li{float: left; margin:0 5px 5px 0;}
+.cycle-slide_btn > li > a{display:block; width: 14px; height:14px; background: url(../imgmain/spr.png) -24px -125px; text-indent: -999em; }
+.cycle-slide_btn > li > a.active{background-position: 0 -126px;}
+.cycle-slide_btn{z-index:7; position:absolute; right: 0; bottom:0; }
+.cycle-slide_btn:after{content:''; display:block; clear:both;}
+.cycle-slide_btn{*zoom:1;}
+/* ----- header2 끝 ----- */
+.sc1{
+	width:1200px; height:700px;
+	padding:0; margin:0 auto;
+	position:relative;
+	display:block;
+}
+.sc1 .p1{
+	width:1200px; height:120px;
+	line-height:120px;
+	padding-top:70px;
+	font-family:'Nanum';
+	font-size:50px;
+	color:#444444;
+}
+.sc1 .p1 > span{
+	font-family:'NanumBold';
+}
+.sc1 > #sale{
+	width:25%; height:355px;
+	float:left;
+	padding-top:25px;
+	position:relative;
+}
+.sc1 > #sale .back{
+	position:relative;
+}
+.sc1 > #sale .front{
+	position:absolute;
+	top:25px; left:50px;
+	opacity:1;
+	transition: opacity 0.3s ease 0.2s; /*[투명도] 대상, 진행시간,  속도곡선(느리게->빠르게->느리게), 지연시간 */
+}
+.sc1 > #sale .front:hover{ opacity:0; }
+#sale ul{
+	position:relative;
+	font-family:'Nanum';
+	color:#444444;
+	margin:35px 0;
+}
+#sale ul .l1{
+	position:relative;
+	font-family:'Nanum';
+	color:#444444;
+	font-size:14px;
+	margin-top:15px;
+}
+#sale ul .l2{
+	position:relative;
+	font-family:'NanumBold';
+	color:#444444;
+	font-size:22px;
+	margin-top:25px;
+}
+/* -----section1 끝----- */
+/* -----section3 시작----- */
+.sc3 {
+	padding:0; margin:0 auto;
+	width:1200px; height:786px;
+	display:block;
+	position:relative;
+}
+.sc3 .p3{
+	width:1200px;
+	color:#444444;
+	margin:0 auto;
+	padding-top:100px;
+	font-family:'Nanum';
+	font-size:20px;
+	position:relative;
+}
+.p3 p{
+	font-family:'Nanum';
+	font-size:50px;
+	padding-top:19px;
+	padding-bottom:10px;
+}
+.p3 span{
+	font-family:'NanumBold';
+	font-size:50px;
+}
+.sc3 .wrap-sale{
+	width:1200px; height:477px;
+	padding:0; margin:0 auto;
+	position:relative;
+}
+.sc3 #sale1{
+	width:552px; 
+	position:absolute;
+	top:0; left:35px;
+}
+.sc3 #sale2{
+	width:552px;
+	position:absolute;
+	top:0; right:35px;
+}
+#sale1 a{
+	width:550px; height:200px;
+	border:1px solid #e8e8e8;
+	position:relative;
+	padding:0;
+	margin-top:30px;
+	display:block;
+}
+#sale2 a{
+	width:550px; height:200px;
+	border:1px solid #e8e8e8;
+	position:relative;
+	padding:0;
+	margin-top:30px;
+	display:block;
+}
+.sc3 > .wrap-sale #sale1 .back{
+	position:relative;
+}
+.sc3 > .wrap-sale #sale1 a .front{
+	position:absolute;
+	top:0; left:0;
+	opacity:1;
+	transition: opacity 0.3s ease 0.2s; /*[투명도] 대상, 진행시간,  속도곡선(느리게->빠르게->느리게), 지연시간 */
+}
+.sc3 > .wrap-sale #sale1 a .front:hover{ opacity:0; }
+.sc3 > .wrap-sale #sale2 .back{
+	position:relative;
+}
+.sc3 > .wrap-sale #sale2 a .front{
+	position:absolute;
+	top:0; right:0;
+	opacity:1;
+	transition: opacity 0.3s ease 0.2s; /*[투명도] 대상, 진행시간,  속도곡선(느리게->빠르게->느리게), 지연시간 */
+}
+.sc3 > .wrap-sale #sale2 a .front:hover{ opacity:0; }
+/* -----section3 끝----- */
+/* -----section4 시작----- */
+.sc4 {
+	padding:0; margin:0 auto;
+	width:1200px;
+	display:block;
+}
+.sc4 .p4{
+	width:1200px;
+	color:#444444;
+	margin:0 auto;
+	padding-top:100px;
+	font-family:'Nanum';
+	font-size:20px;
+}
+.p4 p{
+	font-family:'Nanum';
+	font-size:50px;
+	padding-top:19px;
+	padding-bottom:40px;
+}
+.p4 span{
+	font-family:'NanumBold';
+	font-size:50px;
+}
+.sc4 video{
+	width:700px;
+	float:left;
+}
+.sc4 img{
+	width:500px;
+}

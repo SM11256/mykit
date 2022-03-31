@@ -1,0 +1,5 @@
+/build/
+/mykit/target/
+/mykit/.classpath
+/mykit/.project
+/mykit/.idea
